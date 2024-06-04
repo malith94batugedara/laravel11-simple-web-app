@@ -1,7 +1,14 @@
 <?php
 
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/add-student',[StudentController::class,'create'])->name('student.create');
+
+Route::get('/all-students',[StudentController::class,'index'])->name('student.index');
+
+Route::post('/add-student',[StudentController::class,'store'])->name('student.store');
