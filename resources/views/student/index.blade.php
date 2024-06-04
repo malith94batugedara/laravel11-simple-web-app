@@ -36,7 +36,7 @@
                     <td>{{$student->department}}</td>
                     <td>{{$student->address}}</td>
                     <td>
-                        <a href="" class="btn btn-success">Edit</a>
+                        <a href="{{ route('student.edit',$student->id) }}" class="btn btn-success">Edit</a>
                         <a href="" class="btn btn-danger">Delete</a>
                     </td>
                 </tr>

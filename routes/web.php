@@ -12,3 +12,7 @@ Route::get('/add-student',[StudentController::class,'create'])->name('student.cr
 Route::get('/all-students',[StudentController::class,'index'])->name('student.index');
 
 Route::post('/add-student',[StudentController::class,'store'])->name('student.store');
+
+Route::get('/edit-student/{student_id}',[StudentController::class,'edit'])->name('student.edit');
+
+Route::post('/update-student/{student_id}',[StudentController::class,'update'])->name('student.update');
