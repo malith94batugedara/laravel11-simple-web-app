@@ -16,3 +16,5 @@ Route::post('/add-student',[StudentController::class,'store'])->name('student.st
 Route::get('/edit-student/{student_id}',[StudentController::class,'edit'])->name('student.edit');
 
 Route::post('/update-student/{student_id}',[StudentController::class,'update'])->name('student.update');
+
+Route::get('/delete-student/{student_id}',[StudentController::class,'destroy'])->name('student.delete');
